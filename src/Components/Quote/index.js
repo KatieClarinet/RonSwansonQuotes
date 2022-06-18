@@ -1,20 +1,24 @@
-import { useEffect, useState} from 'react';
+import {useState} from 'react';
+import './Quote.css';
 
 export default function QuoteGenerator() {
     const [quotes, setQuotes] = useState([]);
 
-    useEffect(() => {
-        async function quoteGenerator() {
-            const response = await fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes");
-            const randomQuotes = await response.json();
-            setQuotes(randomQuotes);
-        } 
-   quoteGenerator();
-    }, []);
+  async function handleClick() {
+    const response = await fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes");
+    const randomQuotes = await response.json();
+    setQuotes(randomQuotes);
+  }
+  return (
 
-    return (
-        <div classname="randomQuotes">
-{quotes.map(random => <div>{random}</div> )}
+    <div id="button-container">
+      <button onClick={handleClick}></button>
+            {quotes.map(random => {
+        return (
+            <div>"{random}"</div>          
+        );
+      })}
     </div>
-       )
-}
+  );
+};
+
