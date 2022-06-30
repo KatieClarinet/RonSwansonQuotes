@@ -1,13 +1,13 @@
 import './App.css';
-import QuoteGenerator from './Components/Quote';
+import Navbar from './Components/Navbar';
+import Quote from './Components/Quote';
 
 
 export default function App() {
   return (
-    <div className="App">      
-      <h1>The Words of Ron Swanson...</h1>
-<QuoteGenerator />     
-<br />
+    <div className="App" id="app">
+     <Navbar />
+      <Quote /> 
     </div>
   );
 }

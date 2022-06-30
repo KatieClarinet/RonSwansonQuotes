@@ -1,7 +1,6 @@
 import {useState} from 'react';
-import './Quote.css';
 
-export default function QuoteGenerator() {
+export default function Quote() {
     const [quotes, setQuotes] = useState([]);
 
   async function handleClick() {
@@ -10,15 +9,18 @@ export default function QuoteGenerator() {
     setQuotes(randomQuotes);
   }
   return (
-
-    <div id="button-container">
-      <button onClick={handleClick}></button>
+    <>
+    <h1>Click for random Ron Quote!</h1> 
+    <div className="button-container">
+      <button className="button-moustache" onClick={handleClick}></button>
             {quotes.map(random => {
         return (
-            <div>"{random}"</div>          
+            <div className="quote-display">"{random}"</div>  
         );
       })}
+    
     </div>
+    </>
   );
 };
 
