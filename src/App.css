@@ -12,63 +12,87 @@
   color: var(--darkgreen);
 }
 
+.quote {
+margin-top: 15vh;
+}
 
-h1 {
-font-size: 5vh;
-display: flex;
-justify-content: center;
+.quote {
+  margin-top: 10vh;
+  }
+
+.main {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5vw;
+  margin-left: 1.5vw;;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: #214F4B;
+  border-radius: 355px 30px 350px 25px/5px 235px 25px 155px;
 }
 
 
-.button-container {
+
+.left-handdrawn {
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  width: 31vw;
+  height: 80vh;
+  display: flex;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 655px;
+  padding:1em;
+  line-height:1.5em;
+  border:solid 5px hsla(0, 95%, 35%, 1);
+}
+.right-handdrawn {
+  width: 31vw;
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  border-radius: 355px 30px 350px 25px/5px 235px 25px 155px;
+  padding:1em;
+  line-height:1.5em;
+  border:solid 5px hsla(0, 95%, 35%, 1);
+} 
+.ron {
+  width: 31vw;
+  border-radius: 355px 30px 350px 25px/5px 235px 25px 155px;
+  padding: 5px;
 }
-
 
 .button-moustache {
   background-image: url(
       "https://live.staticflickr.com/65535/52154229597_ce18075675_w.jpg");
   background-size: cover;
-  width: 400px;
-  height: 160px; 
+  width: 200px;
+  height: 80px; 
   border: none;
-  margin-bottom: 350px;
   position: absolute;
+  margin-top: 35vh;
 }
 
-button:hover {
+.button-moustache:hover {
   transform: scale(1.15);
 }
 
 .quote-display {
-  font-size: 3vh;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 400px;
-  margin-right: 350px;
-}
-.container {
-  display: flex;
-  height: 90vh;
+padding: 20px;
+margin-top: 40vh;
 }
 
-.left {
-  background-color: blanchedalmond;
-  width: 50vw;
-  
+.searchbox {
+  background-color: aquamarine;
 }
 
-.right {
-  background-color: azure;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-}
 
-.ron {
-  height: 90vh;
-}

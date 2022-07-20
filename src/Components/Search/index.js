@@ -1,7 +1,4 @@
 import { useEffect, useState } from 'react';
-import './Search.css'
-import Navbar from '../../Components/Navbar';
-
 
 const API_URL = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes/search'
 
@@ -22,24 +19,21 @@ console.log(data)
 
   return (
     <>
-    <Navbar />
-    <div className="container">
-    <div className ="left">
-    <div id="title-photo">
-          <img alt="ron swanson" className="ron" src="https://live.staticflickr.com/65535/52165967008_3329b09b91_w.jpg" />
-        </div>
-    </div>
-    <div className="right">
+    
+    <div className="right-handdrawn">
+    <h1 className="search">or search here</h1> 
+    <div className="searchbox">
       
       <input placeHolder="Type here..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <button  onClick={() => searchQuotes(searchTerm)}>Find a Quote</button>
+    </div>
     <div id="quote-display">
 
 {query?.length > 0 ? (
-    <div className="container" id="container">
+    <div className="container">
       {query.map(quote => {
         return (
-        <div>{quote}</div>
+        <div>"{quote}"</div>
         );
       })}
       
@@ -50,7 +44,6 @@ console.log(data)
       <h2>No quotes found</h2>
     </div>
   )}
-    </div>
     </div>
     </div>
     </>

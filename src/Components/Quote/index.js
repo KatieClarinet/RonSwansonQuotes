@@ -10,16 +10,21 @@ export default function Quote() {
   }
   return (
     <>
-    <h1>Click for random Ron Quote!</h1> 
-    <div className="button-container">
+    
+    <div className="left-handdrawn">
+    <h1 className="quote">Click for random Ron Quote!</h1> 
       <button className="button-moustache" onClick={handleClick}></button>
             {quotes.map(random => {
         return (
             <div className="quote-display">"{random}"</div>  
         );
       })}
-    
     </div>
+
+    <div className="middle">
+          <img alt="ron swanson" className="ron" src="https://live.staticflickr.com/65535/52165967008_3329b09b91_w.jpg" />
+        </div>
+    
     </>
   );
 };
