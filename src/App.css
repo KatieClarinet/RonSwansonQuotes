@@ -14,19 +14,27 @@
 
 .quote {
 margin-top: 15vh;
+text-align: center;
 }
 
-.quote {
-  margin-top: 10vh;
+.search {
+  margin-top: 8vh;
+  text-align: center;
+
   }
 
 .main {
   display: flex;
+  flex-wrap:wrap;
   height: 100vh;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
   gap: 1.5vw;
   margin-left: 1.5vw;;
+}
+
+.main > div {
+  flex:max(400px, 100%/3 - 20px);
 }
 
 .middle {
@@ -38,8 +46,6 @@ margin-top: 15vh;
   border-color: #214F4B;
   border-radius: 355px 30px 350px 25px/5px 235px 25px 155px;
 }
-
-
 
 .left-handdrawn {
   flex-direction: column;
@@ -69,6 +75,8 @@ margin-top: 15vh;
   width: 31vw;
   border-radius: 355px 30px 350px 25px/5px 235px 25px 155px;
   padding: 5px;
+  min-height: 400px;
+  min-width: 400px;
 }
 
 .button-moustache {
@@ -91,8 +99,10 @@ padding: 20px;
 margin-top: 40vh;
 }
 
-.searchbox {
-  background-color: aquamarine;
+.container {
+  text-align: center;
 }
+
+
 
 
